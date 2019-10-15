@@ -62,22 +62,22 @@ for (let x = 1; x < cookies.length; x++) {
 console.log(HTMLRepresentation);
 document.querySelector(".show-info").innerHTML = HTMLRepresentation
 
-// const locations = [[1,1], [1,2], [1,3], [2,1], [2,2], [2,3]]
+const locations = [[1,1], [1,2], [5,3], [2,1], [2,2], [4,3]]
 
-// let currentLocation
-// for (let k = 0; k < locations.length; k++) {
-//     currentLocation = locations[k]
+let invalidLocation = 0
+for (let k = 0; k < locations.length; k++) {
+    currentLocation = locations[k]
 
-//     if (currentLocation[0] > 2) {
-//         // let invalidLocation = true;
-//         console.log("This location is invalid")
+    if (currentLocation[0] > 2) {
+        invalidLocation += 1
+        console.log("This location is invalid")
         
-//     }
-// }
+    }
+}
 
-// /*
-//     Since k is used as the loop counter, it will be the
-//     total number of locations, not the invalid ones. You
-//     need to fix this somehow.
-// */
-// console.log(`There were ${currentLocation} invalid locations`)
+/*
+    Since k is used as the loop counter, it will be the
+    total number of locations, not the invalid ones. You
+    need to fix this somehow.
+*/
+console.log(`There were ${invalidLocation} invalid locations`)
