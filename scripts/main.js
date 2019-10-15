@@ -33,10 +33,51 @@ for (let x = 1; x < cookies.length; x++) {
 
 //Solution three with variable defined before function with let, then
 //modified within function
-let conjoinedword;
-const conjunction = function (firstWord, secondWord) {
-    conjoinedWord = `${firstWord} ${secondWord}`
-}
+// let conjoinedword;
+// const conjunction = function (firstWord, secondWord) {
+//     conjoinedWord = `${firstWord} ${secondWord}`
+// }
 
-conjunction("Master", "Card")
-console.log("WITH VARIABLE DEFINED BEFORE FUNCTION", conjoinedWord)
+// conjunction("Master", "Card")
+// console.log("WITH VARIABLE DEFINED BEFORE FUNCTION", conjoinedWord)
+
+
+//Completed this one! Finally figured out there wasn't a "show-info" class 
+//in html. Fixed that, and it worked!
+    const ModSquad = {
+        "members": ["Pete Cochran", "Linc Hayes", "Julie Barnes", "Capt. Adam Greer", "Chief Barney Metcalf"],
+        "series": {
+            "start": "1968",
+            "end": "1973"
+        }
+    }
+
+    let HTMLRepresentation = `<h1>The Mod Squad</h1>`
+
+    ModSquad.members.forEach(member => {
+        console.log(member)
+        return HTMLRepresentation += `<div>${member}</div>`
+    })
+
+console.log(HTMLRepresentation);
+document.querySelector(".show-info").innerHTML = HTMLRepresentation
+
+// const locations = [[1,1], [1,2], [1,3], [2,1], [2,2], [2,3]]
+
+// let currentLocation
+// for (let k = 0; k < locations.length; k++) {
+//     currentLocation = locations[k]
+
+//     if (currentLocation[0] > 2) {
+//         // let invalidLocation = true;
+//         console.log("This location is invalid")
+        
+//     }
+// }
+
+// /*
+//     Since k is used as the loop counter, it will be the
+//     total number of locations, not the invalid ones. You
+//     need to fix this somehow.
+// */
+// console.log(`There were ${currentLocation} invalid locations`)
