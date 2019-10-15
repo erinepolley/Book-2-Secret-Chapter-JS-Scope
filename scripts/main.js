@@ -80,4 +80,18 @@ for (let k = 0; k < locations.length; k++) {
     total number of locations, not the invalid ones. You
     need to fix this somehow.
 */
+
+//Got this to work, but had to reduce it to one function.
+//I don't think that was the intent of the exercise.
 console.log(`There were ${invalidLocation} invalid locations`)
+
+const possibleNames = ["Larry", "Leon", "Leona", "Les", "Laura", "Lemony", "Lars", "Lekisha"]
+const randomizer = Math.floor(Math.random() * 7)
+const llamaNamer = function () {
+        const suffix = " the Llama"
+        const name = possibleNames[randomizer]
+        return name + suffix
+    }
+
+const nameMaker = llamaNamer()
+console.log(nameMaker)
